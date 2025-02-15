@@ -92,7 +92,12 @@ class LocationRequestScreenViewModel(
 				is LocationRequestScreenIntent.GetAllSavedLocation -> getAllLocations()
 				is LocationRequestScreenIntent.SendEta -> updateState { it.copy(eta = intent.eta) }
 				is LocationRequestScreenIntent.SendFare -> updateState { it.copy(fare = intent.fare) }
-				is LocationRequestScreenIntent.SendArrival -> updateState { it.copy(hasArrived = intent.hasArrived) }
+				is LocationRequestScreenIntent.SendArrival -> updateState {
+					it.copy(
+						hasArrived = intent.hasArrived,
+						driver = intent.driver
+					)
+				}
 			}
 		}
 	}

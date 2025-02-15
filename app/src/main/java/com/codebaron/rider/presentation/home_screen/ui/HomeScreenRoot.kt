@@ -191,9 +191,10 @@ fun HomeScreen(
 			)
 		},
 		content = {
+			// Handle arrival notification
 			if (locationRequestState.hasArrived) {
 				Toast.makeText(context, "Your driver has arrived", Toast.LENGTH_SHORT).show()
-				ArrivalNotification(driver = selectedDriver!!)
+				ArrivalNotification(driver = locationRequestState.driver!!)
 			}
 		}
 	)

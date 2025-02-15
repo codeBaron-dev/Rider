@@ -147,7 +147,7 @@ fun simulateDriverMovement(
 	userLocation: LatLng,
 	locationRequestScreenViewModel: LocationRequestScreenViewModel,
 	price: (Double) -> Unit,
-	onArrival: (Boolean) -> Unit,
+	onArrival: (Boolean, DriverEntity) -> Unit,
 ) {
 	locationRequestScreenViewModel.viewModelScope.launch {
 		var currentLat = driver.latitude
@@ -203,7 +203,7 @@ fun simulateDriverMovement(
 			)
 
 			if (distance < 10) { // 10 meters threshold
-				onArrival(true)
+				onArrival(true, driver)
 				break
 			}
 

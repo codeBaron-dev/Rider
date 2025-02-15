@@ -1,5 +1,6 @@
 package com.codebaron.rider.presentation.onboard_screen.view_model
 
+import com.codebaron.rider.data.local.drivers.DriverEntity
 import com.codebaron.rider.data.local.location.LocationDetails
 
 sealed class LocationRequestScreenIntent {
@@ -9,6 +10,6 @@ sealed class LocationRequestScreenIntent {
 	data object GetAllSavedLocation : LocationRequestScreenIntent()
 	data class SendEta(val eta: Int): LocationRequestScreenIntent()
 	data class SendFare(val fare: Double): LocationRequestScreenIntent()
-	data class SendArrival(val hasArrived: Boolean): LocationRequestScreenIntent()
+	data class SendArrival(val hasArrived: Boolean, val driver: DriverEntity): LocationRequestScreenIntent()
 
 }

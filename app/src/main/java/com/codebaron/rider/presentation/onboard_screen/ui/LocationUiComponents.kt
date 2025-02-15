@@ -499,7 +499,9 @@ fun LocationMarkerWithRipple(
 						userLocation = currentLocation,
 						locationRequestScreenViewModel = locationRequestScreenViewModel,
 						price = { fare -> },
-						onArrival = { arrival -> onLocationAction(LocationRequestScreenIntent.SendArrival(arrival))}
+						onArrival = { arrival, driver ->
+							onLocationAction(LocationRequestScreenIntent.SendArrival(arrival, driver))
+						}
 					)
 					showAlertDialog = false
 				}) {

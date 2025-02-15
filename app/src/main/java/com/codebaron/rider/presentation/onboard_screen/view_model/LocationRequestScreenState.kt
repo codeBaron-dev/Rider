@@ -15,5 +15,6 @@ data class LocationRequestScreenState(
 	val address: String = "",
 	val eta: Int = 0,
 	val fare: Double = 0.0,
-	val hasArrived: Boolean = false
+	val hasArrived: Boolean = false,
+	val driver: DriverEntity? = null
 )
