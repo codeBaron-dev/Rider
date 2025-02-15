@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rider</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="google_maps_key">AIzaSyA5UFQsgV7zTLuK-1KaTXzYpSZcApZQTQA</string>
+</resources>
